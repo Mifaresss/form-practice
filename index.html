@@ -11,220 +11,235 @@
 </head>
 
 <body>
-   <div class="container">
-      <header class="header">
-         <button class="header__button button">
-            <img class="header__button-img" src="./images/arrow-left-svgrepo-com.svg" alt="">
-            <span class="header__button-text">Go back</span>
-         </button>
-         <a href="#" class="header__logo logo">
-            <img src="./images/logo.jpg" alt="" class="logo__img">
-         </a>
-         <button class="header__button button">
-            <img class="header__button-img" src="./images/sign-in-duotone-svgrepo-com.svg" alt="">
-            <span class="header__button-text">Sign in</span>
-         </button>
-      </header>
-      <form class="form">
-         <div class="form__header header-form">
-            <fieldset class="header-form__order-data order-data">
-               <legend class="order-data__title">Your order</legend>
-               <table class="order-data__table order-data-table">
-                  <tr class="order-data-table__row order-data-table__row--header">
-                     <th class="order-data-table__cell">Items</th>
-                     <th class="order-data-table__cell">Details</th>
-                     <th class="order-data-table__cell">Price</th>
-                     <th class="order-data-table__cell">Delivery</th>
-                  </tr>
-                  <tr class="order-data-table__row">
-                     <td class="order-data-table__cell">2 documents</td>
-                     <td class="order-data-table__cell">2 languages</td>
-                     <td class="order-data-table__cell">$ 696.06</td>
-                     <td class="order-data-table__cell">48 hours*</td>
-                  </tr>
-               </table>
-               <div class="order-data__buttons">
-                  <button class="order-data__button button sumbit-button" type="submit">Place order</button>
-                  <button class="order-data__button button reset-button" type="reset">Print a quote</button>
-               </div>
-            </fieldset>
-            <fieldset class="header-form__help-section help-section">
-               <div class="help-section__container">
-                  <img class="help-section__img" src="./images/help-svgrepo-com.svg" alt="">
-                  <legend class="help-section__title">Help center</legend>
-                  <p class="help-section__text">
-                     If you need assistance while placing your order, contact one of our beloved
-                     Project Manager by phone or email.
-                  </p>
-                  <address class="help-section__address">
-                     <a href="" class="help-section__number">+971 (0) 555 555</a>
-                     <a href="" class="help-section__email">help@qtest.com</a>
-                  </address>
-               </div>
-            </fieldset>
-         </div>
-         <div class="form__container">
-            <fieldset class="form__hero-section hero-section">
-               <legend class="hero-section__title">Select what you want to translate</legend>
-               <div class="hero-section__container">
-                  <label class="hero-section__label" for="website">
-                     <img class="hero-section__icon" src="./images/website.jpg" alt="">
-                     <input class="hero-section__input" type="radio" name="item-for-translate" id="website">
-                     <span class="hero-section__item-text">Website</span>
-                  </label>
-                  <label class="hero-section__label" for="documents">
-                     <img class="hero-section__icon" src="./images/documents.jpg" alt="">
-                     <input class="hero-section__input" type="radio" name="item-for-translate" id="documents">
-                     <span class="hero-section__item-text">Documents</span>
-                  </label>
-                  <label class="hero-section__label" for="social-account">
-                     <img class="hero-section__icon" src="./images/social-account.jpg" alt="">
-                     <input class="hero-section__input" type="radio" name="item-for-translate" id="social-account">
-                     <span class="hero-section__item-text">Social Account</span>
-                  </label>
-               </div>
-            </fieldset>
-            <ol class="form__steps steps">
-               <li class="steps__point">
-                  <fieldset class="form__upload-section upload-section">
-                     <legend class="upload-section__title heading-form">Upload your documents
-                        <span class="upload-section__title-description">(Doc, Docs, Text, PDF, Markdown)</span>
-                     </legend>
-                     <label class="upload-section__label" for="upload-input">
-                        <img class="upload-section__icon" src="./images/upload-svgrepo-com.svg" alt="">
-                        <span class="upload-section__input-text">Upload a new file</span>
-                        <input class="upload-section__input" type="file" id="upload-input">
+   <div class="wrapper">
+      <div class="container">
+         <header class="header">
+            <button class="header__button button">
+               <img class="header__button-img" src="./images/arrow-left-svgrepo-com.svg" alt="">
+               <span class="header__button-text">Go back</span>
+            </button>
+            <a href="#" class="header__logo logo">
+               <img src="./images/logo.jpg" alt="" class="logo__img">
+            </a>
+            <button class="header__button button">
+               <img class="header__button-img" src="./images/sign-in-duotone-svgrepo-com.svg" alt="">
+               <span class="header__button-text">Sign in</span>
+            </button>
+         </header>
+         <form class="form">
+            <div class="form__header header-form">
+               <fieldset class="header-form__order-data order-data">
+                  <legend class="order-data__title">Your order</legend>
+                  <table class="order-data__table order-data-table">
+                     <tr class="order-data-table__row order-data-table__row--header">
+                        <th class="order-data-table__cell">Items</th>
+                        <th class="order-data-table__cell remove-min-width">Details</th>
+                        <th class="order-data-table__cell">Price</th>
+                        <th class="order-data-table__cell remove-min-width">Delivery</th>
+                     </tr>
+                     <tr class="order-data-table__row">
+                        <td class="order-data-table__cell">2 documents</td>
+                        <td class="order-data-table__cell remove-min-width">2 languages</td>
+                        <td class="order-data-table__cell">$ 696.06</td>
+                        <td class="order-data-table__cell remove-min-width">48 hours*</td>
+                     </tr>
+                  </table>
+                  <div class="order-data__buttons main-form-buttons">
+                     <button class="main-form-buttons__button main-form-buttons__button--submit button" type="submit">
+                        Place order
+                     </button>
+                     <button class="main-form-buttons__button main-form-buttons__button--reset button" type="reset">
+                        Print a quote
+                     </button>
+                  </div>
+               </fieldset>
+               <fieldset class="header-form__help-section help-section">
+                  <div class="help-section__container">
+                     <legend class="help-section__title">Help center</legend>
+                     <img class="help-section__img" src="./images/help-svgrepo-com.svg" alt="">
+                     <p class="help-section__text">
+                        If you need assistance while placing your order, contact one of our beloved
+                        Project Manager by phone or email.
+                     </p>
+                     <address class="help-section__address">
+                        <a href="" class="help-section__link help-section__number">+971 (0) 555 555</a>
+                        <a href="" class="help-section__link help-section__email">help@qtest.com</a>
+                     </address>
+                  </div>
+               </fieldset>
+            </div>
+            <div class="form__container">
+               <fieldset class="form__hero-section hero-section">
+                  <legend class="hero-section__title">Select what you want to translate</legend>
+                  <div class="hero-section__container">
+                     <label class="hero-section__label" for="website">
+                        <img class="hero-section__icon" src="./images/website.jpg" alt="">
+                        <input class="hero-section__input" type="radio" name="item-for-translate" id="website">
+                        <span class="hero-section__item-text">Website</span>
                      </label>
-                     <table class="upload-section__table table-upload-section">
-                        <tr class="table-upload-section__row">
-                           <th class="table-upload-section__cell-header">File name</th>
-                           <th class="table-upload-section__cell-header">File size</th>
-                           <th class="table-upload-section__cell-header">Number of words</th>
-                           <th class="table-upload-section__cell-header table-upload-section__cell--header-icon">Remove
-                           </th>
-                        </tr>
-                        <tr class="table-upload-section__row">
-                           <td class="table-upload-section__cell">
-                              <img class="table-upload-section__file-icon" src="./images/file-svgrepo-com.svg" alt="">
-                              business_operations.docx
-                           </td>
-                           <td class="table-upload-section__cell">78kb</td>
-                           <td class="table-upload-section__cell">842</td>
-                           <td class="table-upload-section__cell table-upload-section__cell--icon">
-                              <img src="./images/delete-svgrepo-com.svg" alt="">
-                           </td>
-                        </tr>
-                        <tr class="table-upload-section__row">
-                           <td class="table-upload-section__cell">
-                              <img class="table-upload-section__file-icon" src="./images/file-svgrepo-com.svg" alt="">
-                              business_financial.docx
-                           </td>
-                           <td class="table-upload-section__cell">26kb</td>
-                           <td class="table-upload-section__cell">2,326</td>
-                           <td class="table-upload-section__cell table-upload-section__cell--icon">
-                              <img src="./images/delete-svgrepo-com.svg" alt="">
-                           </td>
-                        </tr>
-                     </table>
-                  </fieldset>
-               </li>
-               <li class="steps__point">
-                  <fieldset class="form__languages-section languages-section">
-                     <legend class="languages-section__heading heading-form">Choose your languages pairings</legend>
-                     <div class="languages-section__row">
-                        <p class="languages-section__description">From</p>
-                        <div class="languages-section__select-wrapper">
-                           <select class="languages-section__select" name="lang-from" id="lang-from">
-                              <option value="">English</option>
-                              <option value="">Ukrainian</option>
-                              <option value="">Russian</option>
-                              <option value="">German</option>
-                              <option value="">Italian</option>
-                           </select>
-                        </div>
-                     </div>
-                     <div class="languages-section__row">
-                        <p class="languages-section__description">To</p>
-                        <div class="languages-section__select-wrapper">
-                           <select class="languages-section__select" name="lang-from" id="lang-from">
-                              <option value="">Arabic</option>
-                              <option value="">Ukrainian</option>
-                              <option value="">Russian</option>
-                              <option value="">German</option>
-                              <option value="">Italian</option>
-                           </select>
-                        </div>
-                        <div class="languages-section__select-wrapper">
-                           <select class="languages-section__select" name="lang-from" id="lang-from">
-                              <option value="">Kurdish</option>
-                              <option value="">Ukrainian</option>
-                              <option value="">Russian</option>
-                              <option value="">German</option>
-                              <option value="">Italian</option>
-                           </select>
-                        </div>
-                        <img class="recycle-bin-img" src="./images/delete-svgrepo-com.svg" alt="">
-                        <button class="language-section__btn-add" type="button">+ ADD</button>
-                     </div>
-                  </fieldset>
-               </li>
-               <li class="steps__point">
-                  <fieldset class="form__tone-section tone-section">
-                     <legend class="tone-section__title heading-form">Select your desired tone</legend>
-                     <div class="tone-section__wrapper">
-                        <label class="tone-section__label" for="tone-section-input--friendly">
-                           <img class="tone-section__input-icon" src="./images/chat-svgrepo-com.svg" alt="">
-                           <span class="tone-section__input-text">Friendly / Casual</span>
-                           <input class="tone-section__input" type="radio" name="tone-section"
-                              id="tone-section-input--friendly">
+                     <label class="hero-section__label" for="documents">
+                        <img class="hero-section__icon" src="./images/documents.jpg" alt="">
+                        <input class="hero-section__input" type="radio" name="item-for-translate" id="documents">
+                        <span class="hero-section__item-text">Documents</span>
+                     </label>
+                     <label class="hero-section__label" for="social-account">
+                        <img class="hero-section__icon" src="./images/social-account.jpg" alt="">
+                        <input class="hero-section__input" type="radio" name="item-for-translate" id="social-account">
+                        <span class="hero-section__item-text">Social Account</span>
+                     </label>
+                  </div>
+               </fieldset>
+               <ol class="form__steps steps">
+                  <li class="steps__point">
+                     <fieldset class="form__upload-section upload-section">
+                        <legend class="upload-section__title heading-form">Upload your documents
+                           <span class="upload-section__title-description">(Doc, Docs, Text, PDF, Markdown)</span>
+                        </legend>
+                        <label class="upload-section__label" for="upload-input">
+                           <img class="upload-section__icon" src="./images/upload-svgrepo-com.svg" alt="">
+                           <span class="upload-section__input-text">Upload a new file</span>
+                           <input class="upload-section__input visually-hidden" type="file" id="upload-input">
                         </label>
-                        <label class="tone-section__label" for="tone-section-input--corporate">
-                           <img class="tone-section__input-icon" src="./images/office-briefcase-svgrepo-com.svg" alt="">
-                           <span class="tone-section__input-text">Corporate / Pro</span>
-                           <input class="tone-section__input" type="radio" name="tone-section"
-                              id="tone-section-input--corporate">
-                        </label>
-                        <label class="tone-section__label" for="tone-section-input--media">
-                           <img class="tone-section__input-icon" src="./images/speaker-svgrepo-com.svg" alt="">
-                           <span class="tone-section__input-text">Media / Formal</span>
-                           <input class="tone-section__input" type="radio" name="tone-section"
-                              id="tone-section-input--media">
-                        </label>
-                     </div>
-                  </fieldset>
-               </li>
-               <li class="steps__point">
-                  <fieldset class="form__time-section time-section">
-                     <legend class="time-section__title heading-form">Tell us how urgent this job is</legend>
-                     <div class="time-section__wrapper-input">
-                        <input class="time-section__input" type="range" min="0" max="2" step="1" value="1">
-                        <div class="time-section__input-text">
-                           <span>I got time</span>
-                           <span>Average</span>
-                           <span>Yesterday</span>
+                        <table class="upload-section__table table-upload-section">
+                           <tr class="table-upload-section__row">
+                              <th class="table-upload-section__cell-header">File name</th>
+                              <th class="table-upload-section__cell-header left-cell-second">File size</th>
+                              <th class="table-upload-section__cell-header left-cell-first">Number of words</th>
+                              <th class="table-upload-section__cell-header table-upload-section__cell--header-icon">
+                                 Remove
+                              </th>
+                           </tr>
+                           <tr class="table-upload-section__row">
+                              <td class="table-upload-section__cell">
+                                 <img class="table-upload-section__file-icon" src="./images/file-svgrepo-com.svg"
+                                    alt="">
+                                 business_operations.docx
+                              </td>
+                              <td class="table-upload-section__cell left-cell-second">78kb</td>
+                              <td class="table-upload-section__cell left-cell-first">842</td>
+                              <td class="table-upload-section__cell table-upload-section__cell--icon">
+                                 <button class="table-upload-section__remove-button" type="button">
+                                    <img src="./images/delete-svgrepo-com.svg" alt="">
+                                 </button>
+                              </td>
+                           </tr>
+                           <tr class="table-upload-section__row">
+                              <td class="table-upload-section__cell">
+                                 <img class="table-upload-section__file-icon" src="./images/file-svgrepo-com.svg"
+                                    alt="">
+                                 business_financial.docx
+                              </td>
+                              <td class="table-upload-section__cell left-cell-second">26kb</td>
+                              <td class="table-upload-section__cell left-cell-first">2,326</td>
+                              <td class="table-upload-section__cell table-upload-section__cell--icon">
+                                 <button class="table-upload-section__remove-button" type="button">
+                                    <img src="./images/delete-svgrepo-com.svg" alt="">
+                                 </button>
+                              </td>
+                           </tr>
+                        </table>
+                     </fieldset>
+                  </li>
+                  <li class="steps__point">
+                     <fieldset class="form__languages-section languages-section">
+                        <legend class="languages-section__heading heading-form">Choose your languages pairings</legend>
+                        <div class="languages-section__row">
+                           <p class="languages-section__description">From</p>
+                           <div class="languages-section__select-wrapper">
+                              <select class="languages-section__select" name="lang-from" id="lang-from">
+                                 <option value="">English</option>
+                                 <option value="">Ukrainian</option>
+                                 <option value="">Russian</option>
+                                 <option value="">German</option>
+                                 <option value="">Italian</option>
+                              </select>
+                           </div>
                         </div>
-                     </div>
-                     <div class="time-section__info info-block">
-                        <div class="info-block__title-wrapper">
-                           <img class="info-block__title-icon" src="./images/info-svgrepo-com.svg" alt="">
-                           <p class="info-block__title">Timeline info</p>
+                        <div class="languages-section__row">
+                           <p class="languages-section__description">To</p>
+                           <div class="languages-section__select-wrapper">
+                              <select class="languages-section__select" name="lang-from" id="lang-to">
+                                 <option value="">Arabic</option>
+                                 <option value="">Ukrainian</option>
+                                 <option value="">Russian</option>
+                                 <option value="">German</option>
+                                 <option value="">Italian</option>
+                              </select>
+                           </div>
+                           <div class="languages-section__select-wrapper">
+                              <select class="languages-section__select adaptive-select" name="lang-from"
+                                 id="lang-to-second">
+                                 <option value="">Kurdish</option>
+                                 <option value="">Ukrainian</option>
+                                 <option value="">Russian</option>
+                                 <option value="">German</option>
+                                 <option value="">Italian</option>
+                              </select>
+                           </div>
+                           <img class="recycle-bin-img" src="./images/delete-svgrepo-com.svg" alt="">
+                           <button class="language-section__btn-add button" type="button">+ ADD</button>
                         </div>
-                        <p class="info-block__description">With an <span>AVERAGE</span> timeline set up, our expert
-                           translator can take a reasonable amount of time perfecting your translation
-                        </p>
-                     </div>
-                  </fieldset>
-               </li>
-               <li class="steps__point">
-                  <fieldset>
-                     <legend class="payment-section__title heading-form">Sign up and choose a payment method</legend>
-                  </fieldset>
-               </li>
-            </ol>
-         </div>
-      </form>
+                     </fieldset>
+                  </li>
+                  <li class="steps__point">
+                     <fieldset class="form__tone-section tone-section">
+                        <legend class="tone-section__title heading-form">Select your desired tone</legend>
+                        <div class="tone-section__wrapper">
+                           <label class="tone-section__label" for="tone-section-input--friendly">
+                              <img class="tone-section__input-icon" src="./images/chat-svgrepo-com.svg" alt="">
+                              <span class="tone-section__input-text">Friendly / Casual</span>
+                              <input class="tone-section__input" type="radio" name="tone-section"
+                                 id="tone-section-input--friendly">
+                           </label>
+                           <label class="tone-section__label" for="tone-section-input--corporate">
+                              <img class="tone-section__input-icon" src="./images/office-briefcase-svgrepo-com.svg"
+                                 alt="">
+                              <span class="tone-section__input-text">Corporate / Pro</span>
+                              <input class="tone-section__input" type="radio" name="tone-section"
+                                 id="tone-section-input--corporate">
+                           </label>
+                           <label class="tone-section__label" for="tone-section-input--media">
+                              <img class="tone-section__input-icon" src="./images/speaker-svgrepo-com.svg" alt="">
+                              <span class="tone-section__input-text">Media / Formal</span>
+                              <input class="tone-section__input" type="radio" name="tone-section"
+                                 id="tone-section-input--media">
+                           </label>
+                        </div>
+                     </fieldset>
+                  </li>
+                  <li class="steps__point">
+                     <fieldset class="form__time-section time-section">
+                        <legend class="time-section__title heading-form">Tell us how urgent this job is</legend>
+                        <div class="time-section__wrapper-input">
+                           <input class="time-section__input" type="range" min="0" max="2" step="1" value="1">
+                           <div class="time-section__input-text">
+                              <span>I got time</span>
+                              <span>Average</span>
+                              <span>Yesterday</span>
+                           </div>
+                        </div>
+                        <div class="time-section__info info-block">
+                           <div class="info-block__title-wrapper">
+                              <img class="info-block__title-icon" src="./images/info-svgrepo-com.svg" alt="">
+                              <p class="info-block__title">Timeline info</p>
+                           </div>
+                           <p class="info-block__description">With an <span>AVERAGE</span> timeline set up, our expert
+                              translator can take a reasonable amount of time perfecting your translation
+                           </p>
+                        </div>
+                     </fieldset>
+                  </li>
+                  <li class="steps__point">
+                     <fieldset>
+                        <legend class="payment-section__title heading-form">Sign up and choose a payment method</legend>
+                     </fieldset>
+                  </li>
+               </ol>
+            </div>
+         </form>
+      </div>
+      <footer class="footer"></footer>
    </div>
-   <footer class="footer"></footer>
 </body>
 
 </html>
