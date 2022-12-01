@@ -19,7 +19,7 @@
                <span class="header__button-text">Go back</span>
             </button>
             <a href="#" class="header__logo logo">
-               <img src="./images/logo.jpg" alt="" class="logo__img">
+               <img src="./images/logo.png" alt="" class="logo__img">
             </a>
             <button class="header__button button">
                <img class="header__button-img" src="./images/sign-in-duotone-svgrepo-com.svg" alt="">
@@ -28,8 +28,8 @@
          </header>
          <form class="form">
             <div class="form__header header-form">
-               <fieldset class="header-form__order-data order-data">
-                  <legend class="order-data__title">Your order</legend>
+               <section class="header-form__order-data order-data">
+                  <h1 class="order-data__title">Your order</h1>
                   <table class="order-data__table order-data-table">
                      <tr class="order-data-table__row order-data-table__row--header">
                         <th class="order-data-table__cell">Items</th>
@@ -52,10 +52,10 @@
                         Print a quote
                      </button>
                   </div>
-               </fieldset>
-               <fieldset class="header-form__help-section help-section">
+               </section>
+               <section class="header-form__help-section help-section">
                   <div class="help-section__container">
-                     <legend class="help-section__title">Help center</legend>
+                     <h2 class="help-section__title">Help center</h2>
                      <img class="help-section__img" src="./images/help-svgrepo-com.svg" alt="">
                      <p class="help-section__text">
                         If you need assistance while placing your order, contact one of our beloved
@@ -66,7 +66,7 @@
                         <a href="" class="help-section__link help-section__email">help@qtest.com</a>
                      </address>
                   </div>
-               </fieldset>
+               </section>
             </div>
             <div class="form__container">
                <fieldset class="form__hero-section hero-section">
@@ -98,7 +98,7 @@
                         <label class="upload-section__label" for="upload-input">
                            <img class="upload-section__icon" src="./images/upload-svgrepo-com.svg" alt="">
                            <span class="upload-section__input-text">Upload a new file</span>
-                           <input class="upload-section__input visually-hidden" type="file" id="upload-input">
+                           <input class="upload-section__input visually-hidden" type="file" id="upload-input" multiple>
                         </label>
                         <table class="upload-section__table table-upload-section">
                            <tr class="table-upload-section__row">
@@ -230,15 +230,133 @@
                      </fieldset>
                   </li>
                   <li class="steps__point">
-                     <fieldset>
+                     <fieldset class="form__payment-section payment-section">
                         <legend class="payment-section__title heading-form">Sign up and choose a payment method</legend>
+                        <p class="payment-section__description">Already have an account with us?
+                           <button class="payment-section__sign-in-button" type="button">Sign in</button>.
+                        </p>
+                        <div class="payment-section__input-wrapper">
+                           <label class="payment-section__label" for="input-name">Full name</label>
+                           <input class="payment-section__input" type="text" id="input-name"
+                              placeholder="Michael Jordan">
+                        </div>
+                        <div class="payment-section__inputs-container">
+                           <div class="payment-section__input-wrapper">
+                              <label class="payment-section__label" for="input-email">Email address</label>
+                              <input class="payment-section__input" type="email" id="input-email"
+                                 placeholder="email@domain.etc" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                                 title="name@domain.etc">
+                           </div>
+                           <div class="payment-section__input-wrapper">
+                              <label class="payment-section__label" for="input-password">Choose a password</label>
+                              <input class="payment-section__input" type="text" id="input-password"
+                                 placeholder="Your password" minlength="6">
+                           </div>
+                        </div>
+                        <div class="payment-section__wrapper-radio-inputs">
+                           <label class="payment-section__radio-label" for="mastercard">
+                              <img class="payment-section__icon payment-section__icon--size"
+                                 src="./images/visa-svgrepo-com.svg" alt="">
+                              <img class="payment-section__icon payment-section__icon--size"
+                                 src="./images/mastercard-3-svgrepo-com.svg" alt="">
+                              <input class="payment-section__radio-input visually-hidden" type="radio"
+                                 name="payment-method" id="mastercard" checked>
+
+                              <div class="payment-section__inputs-card-info inputs-card-info">
+                                 <div class="inputs-card-info__input-wrapper inputs-card-info__card-number">
+                                    <label class="payment-section__label" for="card-number">Card number</label>
+                                    <input class="payment-section__input" type="text" id="card-number"
+                                       title="Вводите только цифры (должно быть 16)" pattern="[0-9]{16}">
+                                 </div>
+                                 <div class="inputs-card-info__input-wrapper inputs-card-info__card-date">
+                                    <label class="payment-section__label" for="card-date">Expiry date</label>
+                                    <input class="payment-section__input" type="date" id="card-date">
+                                 </div>
+                                 <div class="inputs-card-info__input-wrapper inputs-card-info__card-code">
+                                    <label class="payment-section__label" for="card-code">Code</label>
+                                    <input class="payment-section__input" type="text" id="card-code" maxlength="3"
+                                       title="Можно ввести только три цифры (код вашей карты)" pattern="[0-9]{3}">
+                                 </div>
+                              </div>
+                           </label>
+                           <label class="payment-section__radio-label" for="paypal">
+                              <img class="payment-section__icon" src="./images/paypal-svgrepo-com.svg" alt="">
+                              <input class="payment-section__radio-input visually-hidden" type="radio"
+                                 name="payment-method" id="paypal">
+                           </label>
+                           <label class="payment-section__radio-label" for="amazon">
+                              <img class="payment-section__icon" src="./images/amazon-2-logo-svgrepo-com.svg" alt="">
+                              <input class="payment-section__radio-input visually-hidden" type="radio"
+                                 name="payment-method" id="amazon">
+                           </label>
+                        </div>
                      </fieldset>
                   </li>
                </ol>
+               <div class="form__footer footer-form">
+                  <label class="footer-form__label" for="footer-checkbox">
+                     <span class="footer-form__label-text">I agree to the</span>
+                     <input class="footer-form__input" type="checkbox" id="footer-checkbox" checked>
+                     <a class="footer-form__link" href="#">Terms & Conditions</a>
+                  </label>
+                  <div class="footer-form__wrapper-buttons">
+                     <button class="footer-form__button main-form-buttons__button--submit button" type="submit">
+                        Place order
+                     </button>
+                     <button class="footer-form__button main-form-buttons__button--reset button" type="reset">
+                        Print a quote
+                     </button>
+                  </div>
+               </div>
             </div>
          </form>
       </div>
-      <footer class="footer"></footer>
+      <footer class="footer">
+         <div class="footer__container container">
+            <div class="footer__section footer__section--about-us">
+               <div class="footer__wrapper-title">
+                  <img class="footer__icon-section" src="./images/like-svgrepo-com.svg" alt="">
+                  <h2 class="footer__title">What we do</h2>
+               </div>
+               <p class="footer__description">
+                  We provide a full range of language
+                  services including content development,
+                  document, website and social media
+                  accounts translations.
+               </p>
+            </div>
+            <div class="footer__section footer__section--address">
+               <div class="footer__wrapper-title">
+                  <img class="footer__icon-section" src="./images/compass-svgrepo-com.svg" alt="">
+                  <h2 class="footer__title">Our main office</h2>
+               </div>
+               <address class="footer__address">
+                  <p class="footer__address-text">Dubai, UAE</p>
+                  <p class="footer__address-text">P.O. Box: 502735</p>
+                  <p class="footer__address-text">Phone: <a href="tel:#">+971 (0) 44278128</a></p>
+               </address>
+            </div>
+            <div class="footer__section footer__section--social">
+               <div class="footer__wrapper-title">
+                  <img class="footer__icon-section" src="./images/connect-svgrepo-com.svg" alt="">
+                  <h2 class="footer__title">Connect with us</h2>
+               </div>
+               <div class="footer__wrapper-social">
+                  <img class="footer__social-icon" src="./images/facebook.svg" alt="">
+                  <a href="#" class="footer__social-link">Facebook</a>
+               </div>
+               <div class="footer__wrapper-social">
+                  <img class="footer__social-icon" src="./images/twitter.svg" alt="">
+                  <a href="#" class="footer__social-link">Twitter</a>
+               </div>
+               <div class="footer__wrapper-social">
+                  <img class="footer__social-icon" src="./images/linkedin.svg" alt="">
+                  <a href="#" class="footer__social-link">Linkedin</a>
+               </div>
+            </div>
+            <a class="footer__logo" href="#"><img class="footer__logo-img" src="./images/footer-logo.jpg" alt=""></a>
+         </div>
+      </footer>
    </div>
 </body>
 
