@@ -854,9 +854,6 @@ label {
 	outline: var(--main-outline);
 	background-color: var(--secondary-background-color);
 }
-.payment-section__radio-label:has(.payment-section__radio-input:focus):hover {
-	background-color: var(--main-background-color);
-}
 .payment-section__radio-label:has(.payment-section__radio-input:checked) {
 	outline: 6px solid #76A8E0;
 }
