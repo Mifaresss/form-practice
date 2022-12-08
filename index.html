@@ -19,7 +19,14 @@
                <span class="header__button-text">Go back</span>
             </button>
             <a href="#" class="header__logo logo">
-               <img src="./images/logo.png" alt="" class="logo__img">
+               <svg class="logo__img img-logo" width="313" height="313" viewBox="0 0 313 313"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <circle class="img-logo__circle" cx="156" cy="156" r="156" fill="#DADDE7" />
+                  <circle class="img-logo__medium-circle" cx="156" cy="156" r="100" fill="#EDEEF5" />
+                  <circle class="img-logo__circle" cx="156" cy="156" r="44" fill="#DADDE7" />
+                  <path class="img-logo__triangle" d="M267.252 266.971L205.981 237.113L237.393 205.7L267.252 266.971Z"
+                     fill="#EDEEF5" />
+               </svg>
             </a>
             <button class="header__button button">
                <img class="header__button-img" src="./images/sign-in-duotone-svgrepo-com.svg" alt="">
@@ -35,20 +42,20 @@
                         <th class="order-data-table__cell">Items</th>
                         <th class="order-data-table__cell remove-min-width">Details</th>
                         <th class="order-data-table__cell">Price</th>
-                        <th class="order-data-table__cell remove-min-width">Delivery</th>
+                        <th class="order-data-table__cell">Delivery</th>
                      </tr>
                      <tr class="order-data-table__row">
                         <td class="order-data-table__cell">2 documents</td>
                         <td class="order-data-table__cell remove-min-width">2 languages</td>
                         <td class="order-data-table__cell">$ 696.06</td>
-                        <td class="order-data-table__cell remove-min-width">48 hours*</td>
+                        <td class="order-data-table__cell">48 hours*</td>
                      </tr>
                   </table>
                   <div class="order-data__buttons main-form-buttons">
                      <button class="main-form-buttons__button main-form-buttons__button--submit button" type="submit">
                         Place order
                      </button>
-                     <button class="main-form-buttons__button main-form-buttons__button--reset button" type="reset">
+                     <button class="main-form-buttons__button main-form-buttons__button--reset button" type="button">
                         Print a quote
                      </button>
                   </div>
@@ -73,17 +80,17 @@
                   <legend class="hero-section__title">Select what you want to translate</legend>
                   <div class="hero-section__container">
                      <label class="hero-section__label" for="website">
-                        <img class="hero-section__icon" src="./images/website.jpg" alt="">
+                        <img class="hero-section__icon" src="./images/website.png" alt="">
                         <input class="hero-section__input" type="radio" name="item-for-translate" id="website">
                         <span class="hero-section__item-text">Website</span>
                      </label>
                      <label class="hero-section__label" for="documents">
-                        <img class="hero-section__icon" src="./images/documents.jpg" alt="">
+                        <img class="hero-section__icon" src="./images/documents.png" alt="">
                         <input class="hero-section__input" type="radio" name="item-for-translate" id="documents">
                         <span class="hero-section__item-text">Documents</span>
                      </label>
                      <label class="hero-section__label" for="social-account">
-                        <img class="hero-section__icon" src="./images/social-account.jpg" alt="">
+                        <img class="hero-section__icon" src="./images/social-account.png" alt="">
                         <input class="hero-section__input" type="radio" name="item-for-translate" id="social-account">
                         <span class="hero-section__item-text">Social Account</span>
                      </label>
@@ -275,7 +282,7 @@
                                  <div class="inputs-card-info__input-wrapper inputs-card-info__card-code">
                                     <label class="payment-section__label" for="card-code">Code</label>
                                     <input class="payment-section__input" type="text" id="card-code" maxlength="3"
-                                       title="Можно ввести только три цифры (код вашей карты)" pattern="[0-9]{3}">
+                                       title="You can only enter three digits (your card code)" pattern="[0-9]{3}">
                                  </div>
                               </div>
                            </label>
@@ -296,14 +303,14 @@
                <div class="form__footer footer-form">
                   <label class="footer-form__label" for="footer-checkbox">
                      <span class="footer-form__label-text">I agree to the</span>
-                     <input class="footer-form__input" type="checkbox" id="footer-checkbox" checked>
+                     <input class="footer-form__input" type="checkbox" id="footer-checkbox" required>
                      <a class="footer-form__link" href="#">Terms & Conditions</a>
                   </label>
                   <div class="footer-form__wrapper-buttons">
                      <button class="footer-form__button main-form-buttons__button--submit button" type="submit">
                         Place order
                      </button>
-                     <button class="footer-form__button main-form-buttons__button--reset button" type="reset">
+                     <button class="footer-form__button main-form-buttons__button--reset button" type="button">
                         Print a quote
                      </button>
                   </div>
