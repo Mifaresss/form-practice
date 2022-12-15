@@ -1,1 +1,1 @@
-Hi! This site site is an example of a form with various inputs for entering a variety of data. Written without JS, only HTML & CSS
+Hi! This site is an example of a form with various inputs for entering a variety of data. Written without JS, only HTML & CSS
