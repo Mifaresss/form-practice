@@ -866,7 +866,7 @@ label {
 	outline: 6px solid #76A8E0;
 }
 .payment-section__radio-label:has(.payment-section__radio-input:checked)::after {
-	content: url('../images/check-mark-svgrepo-com.svg');
+	content: url('../images/check-mark.svg');
 	position: absolute;
 	top: -3.5px;
 	right: 6px;
