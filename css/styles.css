@@ -122,19 +122,17 @@ label {
 	flex: 1 1 auto;
 	transition: outline 50ms;
 }
+.logo:hover .img-logo__circle,
 .logo:focus .img-logo__circle {
 	fill: #949ab974;
 }
-.logo__img {
+.img-logo {
 	width: 100%;
 	height: 100%;
 	transition: all .2s;
 }
 .img-logo__circle {
 	transition: all .15s;
-}
-.logo__img:hover .img-logo__circle {
-	fill: #949ab974;
 }
 
 
@@ -377,7 +375,7 @@ label {
 	background-color: var(--secondary-background-color);
 }
 .hero-section__label:has(.hero-section__input:checked)::after {
-	content: url('../images/check-mark-svgrepo-com.svg');
+	content: url('../images/check-mark.svg');
 	position: absolute;
 	top: -4px;
 	right: 5px;
@@ -989,7 +987,7 @@ label {
 .footer-form__label:has(.footer-form__input:checked) .footer-form__label-text::after {
 	width: 21px;
   height: 10px;
-	border-color: rgb(61, 61, 62);
+	border-color: var(--main-text-color);
 }
 .footer-form__label:has(.footer-form__input:checked) .footer-form__label-text::before {
 	background-color: rgba(112, 148, 240, 0.163);
@@ -1101,14 +1099,9 @@ label {
 	padding: 25px;
 	flex: 1 1 auto;
 }
-.footer__logo:hover .footer__logo-img,
-.footer__logo:focus .footer__logo-img {
-	outline: 5px solid #C8CCE8;
-	border-radius: 50%;
-}
-.footer__logo-img {
-	transition: outline 100ms;
-	width: 100%;
+.footer__logo:hover .img-logo__circle,
+.footer__logo:focus .img-logo__circle {
+	fill: #949ab934;
 }
 
 
